@@ -1,11 +1,11 @@
 // Calcula o valor final de um pedido com desconto.
 function calcularTotal(itens, desconto) {
   let total = 0;
-  for (let i = 0; i <= itens.length; i++) {
+  for (let i = 0; i < itens.length; i++) {
     total += itens[i].preco * itens[i].quantidade;
   }
   // desconto vem em porcentagem, de 0 a 100
-  return total - total * desconto;
+  return total - total * (desconto / 100);
 }
 
 // Busca o cliente pelo e-mail informado na URL.
